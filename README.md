@@ -4,7 +4,7 @@
 
 1.该工程修改原本代码文件中的bug，tukey’test时没有对传入的数组进行排序，这样会导致q1大于q3，这样上面所说的条件会包含整个x轴，筛选异常值的功能也就失效了。
 
-2.在这里https://github.com/intelsdi-x/snap-plugin-processor-anomalydetection获取原本Intel的代码，在这个路径$GOPATH/src/github.com/intelsdi-x/下git clone。或直接go get
+2.在这里https://github.com/intelsdi-x/snap-plugin-processor-anomalydetection 获取原本Intel的代码，在这个路径$GOPATH/src/github.com/intelsdi-x/ 下git clone。或直接go get
 
 4.在运行snap框架的服务器cd $GOPATH
 
@@ -32,7 +32,7 @@ cd /opt/snap_plugin_repos_binary/
 Python工程下的两个Python文件：
 
 13.1 anomalyDataParseAndContrast.py  在运行snapteld一整套插件后，从linux上的/tmp文件夹拉取两个对比的log文件到windows本机，
-具体文件名在两个task Manifest中进行定义。根据两个对比文件，可以画出近似https://github.com/intelsdi-x/snap-plugin-processor-anomalydetection的对比图。
+具体文件名在两个task Manifest中进行定义。根据两个对比文件，可以画出近似https://github.com/intelsdi-x/snap-plugin-processor-anomalydetection 的对比图。
 
 13.2 tukeyContrastOnlyFromRawData.py  根据tukey's test的异常检测原理，直接根据原始数据的log文件，而不需要anomaly-processor处理后的log文件，
 直接画出对比图。
