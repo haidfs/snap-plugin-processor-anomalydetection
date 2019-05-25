@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "schedule": {
+    "type": "simple",
+    "interval": "1s",
+    "count": 890
+  },
+  "workflow": {
+    "collect": {
+      "metrics": {
+        "/intel/psutil/vm/used": {}
+      },
+      "process": [
+        {
+          "plugin_name": "anomalydetection",
+          "config": {
+            "BufLength": 10,
+            "Factor": 3.1
+          },
+          "publish": [
+            {
+              "plugin_name": "file",
+              "config": {
+                "file": "/tmp/published_anomalydetection_vm_used.log"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+

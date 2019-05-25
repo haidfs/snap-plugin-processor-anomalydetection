@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "schedule": {
+    "type": "simple",
+    "interval": "1s",
+    "count":890
+  },
+  "workflow": {
+    "collect": {
+      "metrics": {
+        "/intel/psutil/vm/used": {}
+      },
+      "process": [
+        {
+          "plugin_name": "tag",
+          "config": {
+            "tags": "rack1:rack"
+          },
+          "publish": [
+            {
+              "plugin_name": "file",
+              "config": {
+                "file": "/tmp/published_anomaly_contrast_vm_used.log"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
