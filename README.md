@@ -15,33 +15,10 @@
 7.cd.. 再make可得二进制文件
 
 8.运行snap框架的服务器首先需要定义的路径结构，例如我是放在了/opt目录下。
-/opt/snap_plugin_repos_binary/
-|-- anomaly.sh
-|-- bin_bak
-|   |-- snap-plugin-processor-anomalydetection
-|   `-- snap-plugin-processor-anomalydetection-errorsq1q3
-|-- snap-plugin-collector-cpu
-|-- snap-plugin-collector-logs
-|-- snap-plugin-collector-psutil
-|-- snap-plugin-processor-anomalydetection
-|-- snap-plugin-processor-change-detector
-|-- snap-plugin-processor-logs-regexp
-|-- snap-plugin-processor-statistics
-|-- snap-plugin-processor-tag
-|-- snap-plugin-processor-tags-filter
-|-- snap-plugin-publisher-file
-|-- task_manifest_file
-    |-- psutil-anomalydetection-file.json
-    |-- psutil-anomalydetection-file-vm-used.json
-    |-- psutil-statistics-file.json
-    |-- psutil-tag-file.json
-    |-- psutil-tag-file-vm-used.json
-    |-- psutil-tags-filter-file.json
-    |-- task-config.json
-    |-- task.json
-    `-- task.yaml
+
+
 其中snap-plugin-processor-anomalydetection这一类的插件可以按照之前的方式直接编译，
-也可以下载官方提供的二进制文件，自己编译的好处在于编译器会根据系统做一些相应的优化。已经把编译好的可执行文件放在工程中了。
+也可以下载官方提供的二进制文件，自己编译的好处在于编译器会根据系统做一些相应的优化。
 
 9.把之前编译得到的二进制文件拷贝到对应路径下：
 cp build/linux/x86_64/snap-plugin-processor-anomalydetection /opt/snap_plugin_repos_binary/
