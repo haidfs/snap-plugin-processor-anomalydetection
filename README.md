@@ -14,20 +14,17 @@
 
 7.cd.. 再make可得二进制文件
 
-8.运行snap框架的服务器首先需要定义的路径结构，例如我是放在了/opt目录下。
-
-
-其中snap-plugin-processor-anomalydetection这一类的插件可以按照之前的方式直接编译，
+8.运行snap框架的服务器首先需要定义的路径结构，例如我是把三种类型的插件的二进制文件都放在了/opt/snap_plugin_repos_binary目录下。这和工程中的snap_plugin_repos_binary文件夹对应，其中snap-plugin-processor-anomalydetection这一类的插件可以按照之前的方式直接编译，
 也可以下载官方提供的二进制文件，自己编译的好处在于编译器会根据系统做一些相应的优化。
 
 9.把之前编译得到的二进制文件拷贝到对应路径下：
 cp build/linux/x86_64/snap-plugin-processor-anomalydetection /opt/snap_plugin_repos_binary/
 
 10.切换到对应路径
-# cd /opt/snap_plugin_repos_binary/
+cd /opt/snap_plugin_repos_binary/
 
 11.执行启动脚本
-# ./anomaly.sh
+./anomaly.sh
 
 12.约20分钟后，到/tmp/拉取log文件到windows本机。
 
