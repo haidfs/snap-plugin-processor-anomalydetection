@@ -1,12 +1,20 @@
-¸Ã¹¤³ÌÖ÷ÒªÊÇĞŞ¸ÄÁËIntelµÄÒ£²â¿ò¼ÜÖĞµÄÒ»¸öprocess²å¼ş£¬¸Ã²å¼ş¸ù¾İtukey's testÀ´½øĞĞÒì³£¼ì²â²¢·µ»ØÒì³£Öµ¡£
-»ù±¾Ë¼Ïë±È½Ï¼òµ¥£¬¾ÍÊÇbufLength³¤µÄÇĞÆ¬ÅÅĞòºó¼ÆËãÉÏËÄ·ÖÎ»Q3ºÍÏÂËÄ·ÖÎ»Q1£¬´¦ÔÚ[q1 - factor * (q3 - q1)£¬q3 + factor * (q3 - q1)]Çø¼äÍâµÄ¾ÍÈÏÎªÊÇÒì³£Öµ¡£
-1.¸Ã¹¤³ÌĞŞ¸ÄÔ­±¾´úÂëÎÄ¼şÖĞµÄbug£¬tukey¡¯testÊ±Ã»ÓĞ¶Ô´«ÈëµÄÊı×é½øĞĞÅÅĞò£¬ÕâÑù»áµ¼ÖÂq1´óÓÚq3£¬ÕâÑùÉÏÃæËùËµµÄÌõ¼ş»á°üº¬Õû¸öxÖá£¬É¸Ñ¡Òì³£ÖµµÄ¹¦ÄÜÒ²¾ÍÊ§Ğ§ÁË¡£
-2.ÔÚÕâÀïhttps://github.com/intelsdi-x/snap-plugin-processor-anomalydetection»ñÈ¡Ô­±¾IntelµÄ´úÂë£¬ÔÚÕâ¸öÂ·¾¶$GOPATH/src/github.com/intelsdi-x/ÏÂgit clone¡£»òÖ±½Ógo get
-3.ÔÚÔËĞĞsnap¿ò¼ÜµÄ·şÎñÆ÷cd $GOPATH
-3.# cd src/github.com/intelsdi-x/snap-plugin-processor-anomalydetection/
-4.½«snap-plugin-processor-anomalydetection/anomalydetectionÏÂµÄÁ½¸ögoÎÄ¼şÌæ»»Îª¸Ã¹¤³Ìanomalydetection/ÏÂµÄÁ½¸ögoÎÄ¼ş¡£
-4.cd.. ÔÙmake¿ÉµÃ¶ş½øÖÆÎÄ¼ş
-5.ÔËĞĞsnap¿ò¼ÜµÄ·şÎñÆ÷Ê×ÏÈĞèÒª¶¨ÒåµÄÂ·¾¶½á¹¹£¬ÀıÈçÎÒÊÇ·ÅÔÚÁË/optÄ¿Â¼ÏÂ¡£
+è¯¥å·¥ç¨‹ä¸»è¦æ˜¯ä¿®æ”¹äº†Intelçš„é¥æµ‹æ¡†æ¶ä¸­çš„ä¸€ä¸ªprocessæ’ä»¶ï¼Œè¯¥æ’ä»¶æ ¹æ®tukey's testæ¥è¿›è¡Œå¼‚å¸¸æ£€æµ‹å¹¶è¿”å›å¼‚å¸¸å€¼ã€‚
+
+åŸºæœ¬æ€æƒ³æ¯”è¾ƒç®€å•ï¼Œå°±æ˜¯bufLengthé•¿çš„åˆ‡ç‰‡æ’åºåè®¡ç®—ä¸Šå››åˆ†ä½Q3å’Œä¸‹å››åˆ†ä½Q1ï¼Œå¤„åœ¨[q1 - factor * (q3 - q1)ï¼Œq3 + factor * (q3 - q1)]åŒºé—´å¤–çš„å°±è®¤ä¸ºæ˜¯å¼‚å¸¸å€¼ã€‚
+
+1.è¯¥å·¥ç¨‹ä¿®æ”¹åŸæœ¬ä»£ç æ–‡ä»¶ä¸­çš„bugï¼Œtukeyâ€™testæ—¶æ²¡æœ‰å¯¹ä¼ å…¥çš„æ•°ç»„è¿›è¡Œæ’åºï¼Œè¿™æ ·ä¼šå¯¼è‡´q1å¤§äºq3ï¼Œè¿™æ ·ä¸Šé¢æ‰€è¯´çš„æ¡ä»¶ä¼šåŒ…å«æ•´ä¸ªxè½´ï¼Œç­›é€‰å¼‚å¸¸å€¼çš„åŠŸèƒ½ä¹Ÿå°±å¤±æ•ˆäº†ã€‚
+
+2.åœ¨è¿™é‡Œhttps://github.com/intelsdi-x/snap-plugin-processor-anomalydetectionè·å–åŸæœ¬Intelçš„ä»£ç ï¼Œåœ¨è¿™ä¸ªè·¯å¾„$GOPATH/src/github.com/intelsdi-x/ä¸‹git cloneã€‚æˆ–ç›´æ¥go get
+
+4.åœ¨è¿è¡Œsnapæ¡†æ¶çš„æœåŠ¡å™¨cd $GOPATH
+
+5.# cd src/github.com/intelsdi-x/snap-plugin-processor-anomalydetection/
+
+6.å°†snap-plugin-processor-anomalydetection/anomalydetectionä¸‹çš„ä¸¤ä¸ªgoæ–‡ä»¶æ›¿æ¢ä¸ºè¯¥å·¥ç¨‹anomalydetection/ä¸‹çš„ä¸¤ä¸ªgoæ–‡ä»¶ã€‚
+
+7.cd.. å†makeå¯å¾—äºŒè¿›åˆ¶æ–‡ä»¶
+
+8.è¿è¡Œsnapæ¡†æ¶çš„æœåŠ¡å™¨é¦–å…ˆéœ€è¦å®šä¹‰çš„è·¯å¾„ç»“æ„ï¼Œä¾‹å¦‚æˆ‘æ˜¯æ”¾åœ¨äº†/optç›®å½•ä¸‹ã€‚
 /opt/snap_plugin_repos_binary/
 |-- anomaly.sh
 |-- bin_bak
@@ -32,19 +40,26 @@
     |-- task-config.json
     |-- task.json
     `-- task.yaml
-ÆäÖĞsnap-plugin-processor-anomalydetectionÕâÒ»ÀàµÄ²å¼ş¿ÉÒÔ°´ÕÕÖ®Ç°µÄ·½Ê½Ö±½Ó±àÒë£¬
-Ò²¿ÉÒÔÏÂÔØ¹Ù·½Ìá¹©µÄ¶ş½øÖÆÎÄ¼ş£¬×Ô¼º±àÒëµÄºÃ´¦ÔÚÓÚ±àÒëÆ÷»á¸ù¾İÏµÍ³×öÒ»Ğ©ÏàÓ¦µÄÓÅ»¯¡£ÒÑ¾­°Ñ±àÒëºÃµÄ¿ÉÖ´ĞĞÎÄ¼ş·ÅÔÚ¹¤³ÌÖĞÁË¡£
-6.°ÑÖ®Ç°±àÒëµÃµ½µÄ¶ş½øÖÆÎÄ¼ş¿½±´µ½¶ÔÓ¦Â·¾¶ÏÂ£º
+å…¶ä¸­snap-plugin-processor-anomalydetectionè¿™ä¸€ç±»çš„æ’ä»¶å¯ä»¥æŒ‰ç…§ä¹‹å‰çš„æ–¹å¼ç›´æ¥ç¼–è¯‘ï¼Œ
+ä¹Ÿå¯ä»¥ä¸‹è½½å®˜æ–¹æä¾›çš„äºŒè¿›åˆ¶æ–‡ä»¶ï¼Œè‡ªå·±ç¼–è¯‘çš„å¥½å¤„åœ¨äºç¼–è¯‘å™¨ä¼šæ ¹æ®ç³»ç»Ÿåšä¸€äº›ç›¸åº”çš„ä¼˜åŒ–ã€‚å·²ç»æŠŠç¼–è¯‘å¥½çš„å¯æ‰§è¡Œæ–‡ä»¶æ”¾åœ¨å·¥ç¨‹ä¸­äº†ã€‚
+
+9.æŠŠä¹‹å‰ç¼–è¯‘å¾—åˆ°çš„äºŒè¿›åˆ¶æ–‡ä»¶æ‹·è´åˆ°å¯¹åº”è·¯å¾„ä¸‹ï¼š
 cp build/linux/x86_64/snap-plugin-processor-anomalydetection /opt/snap_plugin_repos_binary/
-7.ÇĞ»»µ½¶ÔÓ¦Â·¾¶
+
+10.åˆ‡æ¢åˆ°å¯¹åº”è·¯å¾„
 # cd /opt/snap_plugin_repos_binary/
-8.Ö´ĞĞÆô¶¯½Å±¾
+
+11.æ‰§è¡Œå¯åŠ¨è„šæœ¬
 # ./anomaly.sh
-9.Ô¼20·ÖÖÓºó£¬µ½/tmp/À­È¡logÎÄ¼şµ½windows±¾»ú¡£
-10.¸ù¾İPython¹¤³ÌparseSnapAnomaly»æÍ¼¡£
-Python¹¤³ÌÏÂµÄÁ½¸öPythonÎÄ¼ş£º
-10.1 anomalyDataParseAndContrast.py  ÔÚÔËĞĞsnapteldÒ»ÕûÌ×²å¼şºó£¬´ÓlinuxÉÏµÄ/tmpÎÄ¼ş¼ĞÀ­È¡Á½¸ö¶Ô±ÈµÄlogÎÄ¼şµ½windows±¾»ú£¬
-¾ßÌåÎÄ¼şÃûÔÚÁ½¸ötask ManifestÖĞ½øĞĞ¶¨Òå¡£¸ù¾İÁ½¸ö¶Ô±ÈÎÄ¼ş£¬¿ÉÒÔ»­³ö½üËÆhttps://github.com/intelsdi-x/snap-plugin-processor-anomalydetectionµÄ¶Ô±ÈÍ¼¡£
-10.2 tukeyContrastOnlyFromRawData.py  ¸ù¾İtukey's testµÄÒì³£¼ì²âÔ­Àí£¬Ö±½Ó¸ù¾İÔ­Ê¼Êı¾İµÄlogÎÄ¼ş£¬¶ø²»ĞèÒªanomaly-processor´¦ÀíºóµÄlogÎÄ¼ş£¬
-Ö±½Ó»­³ö¶Ô±ÈÍ¼¡£
-Í¼Æ¬£º Í¼Æ¬ÃüÃû¼´±¾Éíº¬Òå£¬´øÓĞGoµÄÒâÎ¶×ÅÊÇ¸ù¾İÁ½¸ölogÎÄ¼ş»ñÈ¡µÃµ½µÄ¡£
+
+12.çº¦20åˆ†é’Ÿåï¼Œåˆ°/tmp/æ‹‰å–logæ–‡ä»¶åˆ°windowsæœ¬æœºã€‚
+
+13.æ ¹æ®Pythonå·¥ç¨‹parseSnapAnomalyç»˜å›¾ã€‚
+Pythonå·¥ç¨‹ä¸‹çš„ä¸¤ä¸ªPythonæ–‡ä»¶ï¼š
+
+13.1 anomalyDataParseAndContrast.py  åœ¨è¿è¡Œsnapteldä¸€æ•´å¥—æ’ä»¶åï¼Œä»linuxä¸Šçš„/tmpæ–‡ä»¶å¤¹æ‹‰å–ä¸¤ä¸ªå¯¹æ¯”çš„logæ–‡ä»¶åˆ°windowsæœ¬æœºï¼Œ
+å…·ä½“æ–‡ä»¶ååœ¨ä¸¤ä¸ªtask Manifestä¸­è¿›è¡Œå®šä¹‰ã€‚æ ¹æ®ä¸¤ä¸ªå¯¹æ¯”æ–‡ä»¶ï¼Œå¯ä»¥ç”»å‡ºè¿‘ä¼¼https://github.com/intelsdi-x/snap-plugin-processor-anomalydetectionçš„å¯¹æ¯”å›¾ã€‚
+
+13.2 tukeyContrastOnlyFromRawData.py  æ ¹æ®tukey's testçš„å¼‚å¸¸æ£€æµ‹åŸç†ï¼Œç›´æ¥æ ¹æ®åŸå§‹æ•°æ®çš„logæ–‡ä»¶ï¼Œè€Œä¸éœ€è¦anomaly-processorå¤„ç†åçš„logæ–‡ä»¶ï¼Œ
+ç›´æ¥ç”»å‡ºå¯¹æ¯”å›¾ã€‚
+å›¾ç‰‡ï¼š å›¾ç‰‡å‘½åå³æœ¬èº«å«ä¹‰ï¼Œå¸¦æœ‰Goçš„æ„å‘³ç€æ˜¯æ ¹æ®ä¸¤ä¸ªlogæ–‡ä»¶è·å–å¾—åˆ°çš„ã€‚
